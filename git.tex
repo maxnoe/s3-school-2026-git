@@ -1,0 +1,79 @@
+\input{header.tex}
+
+\tikzset{
+  invisible/.style={opacity=0,text opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{%
+    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+  },
+}
+
+
+\author[M. Linhoff]{Maximilian Linhoff}
+\title[VC with Git]{Version Control using \texttt{git}}
+\date[2025-01-15]{%
+  % \raisebox{-1.5cm}{\includegraphics[height=3cm]{../logo-Escape_cropped.png}}
+  \Large S\textsuperscript{3} School – 2025-01-15
+}
+\institute[CTAO ERIC]{%
+  Cherenkov Telescope Array Observatory ERIC\\[\baselineskip]%
+  \includegraphics[height=0.75cm]{./build/figures/license.pdf}%
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}[c]{Overview}
+\tableofcontents
+\end{frame}
+
+\section{whoami}
+\begin{frame}[c, fragile]{\texttt{whoami}}
+  \begin{columns}[onlytextwidth, T]%
+    \begin{column}{0.8\textwidth}%
+      \begin{itemize}
+        \item[{\Large\faGithub}] \href{https://github.com/maxnoe}{maxnoe}
+        \item[{\Large\faUniversity}] Lead Developer of the Data Processing and Preservation System \\ @ CTAO ERIC
+        \item[{\Large\faGraduationCap}] PhD in astroparticle physics @ TU Dortmund, Germany
+        \item[{\Large\faFlask}] Gamma-ray astronomy with Imaging Atmospheric Cherenkov Telescopes (CTAO, FACT, MAGIC)
+        \item[{\Large\faMicroscope}] Software Development, DevOps, Data Analysis, Statistics, Machine Learning, ...
+        \item[{\Large\faLaptopCode}] \faLinux, \faPython, C++, \LaTeX{}, neovim, docker, Kubernetes,...
+        \item[{\Large\faHeart}] FOSS, Open Science, Best Practices
+      \end{itemize}
+    \end{column}%
+    \hfill%
+    \begin{column}{0.19\textwidth}%
+      \includegraphics[height=\textwidth]{images/max.jpg}
+    \end{column}%
+  \end{columns}%
+\end{frame}
+
+
+\begin{frame}[t]{Audience Questions}
+  Did you ever …
+  \begin{itemize}[<+->]
+    \item use any Version Control System?
+    \item use git?
+    \item create a git commit?
+    \item work on a branch other than \texttt{master} or \texttt{main}?
+    \item create a Pull Request?
+    \item fork a repository?
+    \item use git submodules?
+    \item do an interactive rebase?
+    \item use git bisect?
+    \item make an octopus merge?
+  \end{itemize}
+\end{frame}
+
+\copywarning{}
+
+\input{content/vc.tex}
+\input{content/git.tex}
+\headlineframe{Questions?}
+
+\input{content/hosters.tex}
+\input{content/advanced.tex}
+\headlineframe{Questions?}
+
+\end{document}
