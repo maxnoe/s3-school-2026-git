@@ -374,6 +374,11 @@
       \begin{code}{bash}
         $ git push -u origin branch
       \end{code}
+    \item Recent versions of git have a configuration option that make this unnecessary:
+      \begin{code}{bash}
+        $ git config --global push.autoSetupRemote true
+      \end{code}
+      With this, git push on a new branch will \enquote{just work}
   \end{itemize}
 \end{frame}
 
