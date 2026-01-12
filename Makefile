@@ -10,7 +10,7 @@ build/git.pdf: FORCE
 preview: FORCE
 	TEXINPUTS=$(TEXINPUTS) latexmk $(TEXOPTIONS) -pvc git.tex
 
-build/git.pdf: $(addprefix build/figures/, github.png codeberg.pdf forgejo.pdf gitlab.png xkcd_git.png)
+build/git.pdf: $(addprefix build/figures/, license.pdf github.png codeberg.pdf forgejo.pdf gitlab.png xkcd_git.png)
 
 
 build/figures/github.png: | build/figures
