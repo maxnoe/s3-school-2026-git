@@ -40,15 +40,15 @@
       },
     ]
     \node (wd) at (0, 0) [gitstep, fill=red!20, visible on=<1->] {Working directory};
-    \node (idx) [gitstep, fill=yellow!20, below=0.4cm of wd] {Staging};
-    \node (hist) [gitstep, fill=green!20, below=0.4cm of idx] {History};
-    \node [right=1cm of wd, text width=0.5\textwidth, align=flush left] {
+    \node (idx) [gitstep, fill=yellow!20, below=0.4cm of wd, visible on=<2->] {Staging};
+    \node (hist) [gitstep, fill=green!20, below=0.4cm of idx, visible on=<3->] {History};
+    \node [right=1cm of wd, text width=0.5\textwidth, align=flush left, visible on=<1->] {
       What actually is on disk in the current working directory. 
     };
-    \node [right=1cm of idx, text width=0.5\textwidth, align=flush left] {
+    \node [right=1cm of idx, text width=0.5\textwidth, align=flush left, visible on=<2->] {
       Changes that are saved to go into the next commit.
     };
-    \node [right=1cm of hist, text width=0.5\textwidth, align=flush left] {
+    \node [right=1cm of hist, text width=0.5\textwidth, align=flush left, visible on=<3->] {
       The history of the project. All changes ever made. A \emph{Directed Acyclic Graph} of commits.
     };
   \end{tikzpicture}
