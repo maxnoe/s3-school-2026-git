@@ -307,6 +307,19 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]{A note on colors}
+  \begin{itemize}
+    \item By default, git is using red/green for changes and in status
+    \item This might be hard to differentiate if you have a Color Vision Deficiency
+    \item You can configure git's color scheme, e.g. changing green to blue:
+      \begin{code}{bash}
+        $ git config --global color.diff.new "blue"
+        $ git config --global color.status.added "blue"
+      \end{code}
+    \item There are more color options, but these two are the most important
+  \end{itemize}
+\end{frame}
+
 \begin{frame}[fragile]{Loading commits / restoring files}
   \begin{itemize}
     \item Load a certain commit from the history into the CWD (check with \texttt{git log}) \\
