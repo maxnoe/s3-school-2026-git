@@ -202,9 +202,9 @@
       \end{code}
     \item Cloning does not include submodules by default, needs
       \begin{code}{bash}
-        $ git clone <url> --recursive
+        $ git clone --recurse-submodules <url>
       \end{code}
-    \item Update submodules (e.\,g.\ if changed on the remote)
+    \item Update submodules (e.\,g.\ if changed on the remote or if forgotten during clone)
       \begin{code}{bash}
         $ git submodule update --init --recursive
       \end{code}
