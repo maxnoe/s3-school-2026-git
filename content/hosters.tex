@@ -184,6 +184,12 @@
 \begin{frame}[c, fragile]{Making a Pull Request from a forked Repository}
   \begin{itemize}
     \item You should never work on the main branch of a fork, as it would diverge from the main branch of the parent project
+    \item To enforce this is, you can point the main branch of your local copy to upstream:
+      \begin{code}{bash}
+        $ git switch main
+        $ git pull --set-upstream upstream main
+      \end{code}
+      Then, git will pull from upstream on main and you won't be able to push.
     \item When starting the new branch, make sure to start from the up-to-date upstream main/master:
       \begin{code}{bash}
         $ git fetch upstream
